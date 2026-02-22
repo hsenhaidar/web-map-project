@@ -4,7 +4,7 @@ import geopandas as gpd
 
 app = Flask(__name__)
 
-KML_FILE = r"C:\Users\EngSu\Desktop\6.kml"
+
 
 @app.route("/")
 def home():
@@ -25,7 +25,7 @@ def home():
     ).add_to(m)
 
     # Load KML
-    gdf = gpd.read_file(KML_FILE)
+    gdf = gpd.read_file("6.kml")
 
     if gdf.crs and gdf.crs.to_string() != "EPSG:4326":
         gdf = gdf.to_crs(epsg=4326)
