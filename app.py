@@ -12,7 +12,7 @@ def home():
     # Create map
     m = folium.Map(
         location=[33.8938, 35.5018],
-        zoom_start=8,
+        zoom_start=14,
         tiles=None
     )
 
@@ -38,3 +38,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
