@@ -4,7 +4,7 @@ import geopandas as gpd
 
 app = Flask(__name__)
 
-KML_FILE = "6.kml"
+KML_FILE = "Population_Project.kml"
 
 @app.route("/")
 def home():
@@ -12,7 +12,7 @@ def home():
     # Create map
     m = folium.Map(
         location=[33.8938, 35.5018],
-        zoom_start=14,
+        zoom_start=10,
         tiles=None
     )
 
@@ -38,4 +38,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
